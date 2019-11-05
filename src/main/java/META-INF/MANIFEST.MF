@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: log4j-core-2.9.1.jar jstl-1.2.jar mysql-connector-java-5.1
+ .44.jar log4j-1.2.12.jar annotations-15.0.jar log4j-api-2.9.1.jar com
+ mons-pool-1.5.4.jar commons-dbcp-1.4.jar
+

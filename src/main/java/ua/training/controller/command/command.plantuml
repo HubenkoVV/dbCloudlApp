@@ -1,0 +1,233 @@
+@startuml
+
+title __COMMAND's Class Diagram__\n
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class AddArticleCommand {
+          {static} - logger : Logger
+          ~ AddArticleCommand()
+          + execute()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class AddArticlePageCommand {
+          ~ AddArticlePageCommand()
+          + execute()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class AddPeriodicalCommand {
+          {static} - logger : Logger
+          ~ AddPeriodicalCommand()
+          + execute()
+          - checkPriceValue()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class AddPeriodicalPageCommand {
+          + execute()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class AddToBasketCommand {
+          {static} - logger : Logger
+          ~ AddToBasketCommand()
+          + execute()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class ArticleListCommand {
+          ~ ArticleListCommand()
+          + execute()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class BuyPeriodicalsCommand {
+          {static} - logger : Logger
+          ~ BuyPeriodicalsCommand()
+          + execute()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      interface Command {
+          {abstract} + execute()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class CreatorCommand {
+          - commands : Map<String, Command>
+          + CreatorCommand()
+          + action()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class DeleteFromBasketCommand {
+          {static} - logger : Logger
+          ~ DeleteFromBasketCommand()
+          + execute()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class LanguageCommand {
+          {static} - logger : Logger
+          + execute()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class MyAccountCommand {
+          + execute()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class PeriodicalListCommand {
+          ~ PeriodicalListCommand()
+          + execute()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class RecruitmentCommand {
+          {static} - logger : Logger
+          ~ RecruitmentCommand()
+          + execute()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class RegistrationCommand {
+          {static} - logger : Logger
+          ~ RegistrationCommand()
+          + execute()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class ShowArticleCommand {
+          {static} - logger : Logger
+          ~ ShowArticleCommand()
+          + execute()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class SignInCommand {
+          {static} - logger : Logger
+          ~ SignInCommand()
+          + execute()
+      }
+    }
+  }
+  
+
+  package ua.training.controller {
+    package ua.training.controller.command {
+      class SignOutCommand {
+          {static} - logger : Logger
+          + execute()
+      }
+    }
+  }
+  
+
+  AddArticleCommand -up-|> Command
+  AddArticleCommand o-- ArticleService : articleService
+  AddArticlePageCommand -up-|> Command
+  AddArticlePageCommand o-- PeriodicalService : periodicalService
+  AddPeriodicalCommand -up-|> Command
+  AddPeriodicalCommand o-- PeriodicalService : periodicalService
+  AddPeriodicalPageCommand -up-|> Command
+  AddToBasketCommand -up-|> Command
+  AddToBasketCommand o-- PeriodicalService : periodicalService
+  ArticleListCommand -up-|> Command
+  ArticleListCommand o-- ArticleService : articleService
+  ArticleListCommand o-- PeriodicalService : periodicalService
+  BuyPeriodicalsCommand -up-|> Command
+  BuyPeriodicalsCommand o-- PaymentService : paymentService
+  DeleteFromBasketCommand -up-|> Command
+  DeleteFromBasketCommand o-- PeriodicalService : periodicalService
+  LanguageCommand -up-|> Command
+  MyAccountCommand -up-|> Command
+  PeriodicalListCommand -up-|> Command
+  PeriodicalListCommand o-- PeriodicalService : periodicalService
+  PeriodicalListCommand o-- UserService : userService
+  RecruitmentCommand -up-|> Command
+  RecruitmentCommand o-- UserService : userService
+  RegistrationCommand -up-|> Command
+  RegistrationCommand o-- UserService : userService
+  ShowArticleCommand -up-|> Command
+  ShowArticleCommand o-- ArticleService : articleService
+  ShowArticleCommand o-- PeriodicalService : periodicalService
+  SignInCommand -up-|> Command
+  SignInCommand o-- UserService : userService
+  SignOutCommand -up-|> Command
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

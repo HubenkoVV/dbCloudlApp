@@ -1,0 +1,192 @@
+@startuml
+
+title __CONSTANT's Class Diagram__\n
+
+  package ua.training.util.constant {
+    interface Attributes {
+        {static} + PAGE : String
+        {static} + EXCEPTION : String
+        {static} + MESSAGE : String
+        {static} + OPEN_REGISTRATION : String
+        {static} + OPEN_LOGIN : String
+        {static} + LOCALE : String
+        {static} + USER : String
+        {static} + NAME : String
+        {static} + SURNAME : String
+        {static} + PHONE : String
+        {static} + LOGIN : String
+        {static} + LOGIN_SIGN : String
+        {static} + PASSWORD_SIGN : String
+        {static} + PASSWORD : String
+        {static} + PASSWORD_AGAIN : String
+        {static} + USER_ROLE : String
+        {static} + MONEY : String
+        {static} + REG_EXCEPTION : String
+        {static} + SIGNUP_EXCEPTION : String
+        {static} + FULL_PRICE : String
+        {static} + PERIODICALS_IN_BASKET : String
+        {static} + PERIODICAL_PAGE : String
+        {static} + PERIODICALS_USER : String
+        {static} + ARTICLES_PAGE : String
+        {static} + PAGES : String
+        {static} + CURRENT_PAGE : String
+        {static} + PERIODICAL_LIST : String
+        {static} + ARTICLE_LIST : String
+        {static} + PERIODICAL_NAME : String
+        {static} + PERIODICAL_PRICE : String
+        {static} + PERIODICAL_DESCRIPTION : String
+        {static} + ARTICLE_NAME : String
+        {static} + ARTICLE_TEXT : String
+        {static} + ARTICLE_ID : String
+        {static} + ARTICLE : String
+        {static} + ID_PERIODICAL : String
+        {static} + PERIODICAL : String
+        {static} + PERIODICAL_SEARCH : String
+    }
+  }
+  
+
+  package ua.training.util.constant {
+    interface Commands {
+        {static} + LOGIN : String
+        {static} + SIGNOUT : String
+        {static} + REGISTRATION : String
+        {static} + ADD_ARTICLE : String
+        {static} + CREATE_ARTICLE : String
+        {static} + TO_BASKET : String
+        {static} + ARTICLES : String
+        {static} + BUY_PERIODICAL : String
+        {static} + PERIODICALS : String
+        {static} + UPDATE_ACCOUNT : String
+        {static} + SHOW_ARTICLE : String
+        {static} + LANGUAGE : String
+        {static} + MY_ACCOUNT : String
+        {static} + DELETE_FROM_BASKET : String
+        {static} + CREATE_PERIODICAL : String
+        {static} + ADD_PERIODICAL : String
+    }
+  }
+  
+
+  package ua.training.util.constant {
+    class Exceptions {
+        {static} + INCORRECT_LOGIN : String
+        {static} + INCORRECT_PASSWORD : String
+        {static} + INCORRECT_PHONE : String
+        {static} + INCORRECT_DATA : String
+        {static} + NOT_UNIQUE_LOGIN : String
+        {static} + WRONG_LOGIN : String
+        {static} + WRONG_PASSWORD : String
+        {static} + WRONG_MONEY : String
+        {static} + NOT_ENOUGH_MONEY : String
+        {static} + NOT_LOGGED_IN : String
+    }
+  }
+  
+
+  package ua.training.util.constant {
+    class Messages {
+        {static} + ADD_PERIODICAL : String
+        {static} + ADD_ARTICLE : String
+        {static} + SURNAME : String
+        {static} + NAME : String
+        {static} + BALANCE : String
+        {static} + LOGIN : String
+        {static} + PHONE : String
+    }
+  }
+  
+
+  package ua.training.util.constant {
+    interface Pages {
+        {static} + HOME : String
+        {static} + PERIODICALS : String
+        {static} + ARTICLES : String
+        {static} + ARTICLE : String
+        {static} + ADD_PERIODICAL : String
+        {static} + ADD_ARTICLE : String
+        {static} + ACCOUNT : String
+    }
+  }
+  
+
+  package ua.training.util.constant {
+    interface RegexForUser {
+        {static} + PHONE : String
+        {static} + LOGIN : String
+        {static} + PASSWORD : String
+        {static} + MONEY : String
+    }
+  }
+  
+
+  package ua.training.util.constant {
+    class Requests {
+        {static} - bundle : ResourceBundle
+        {static} + INSERT_USER : String
+        {static} + INSERT_PAYMENT : String
+        {static} + INSERT_PERIODICAL : String
+        {static} + INSERT_ARTICLE : String
+        {static} + INSERT_USER_PERIODICAL : String
+        {static} + INSERT_PERIODICAL_PAYMENT : String
+        {static} + SELECT_ALL_USERS : String
+        {static} + SELECT_ALL_PAYMENT : String
+        {static} + SELECT_ALL_PERIODICAL : String
+        {static} + SELECT_ALL_ARTICLE : String
+        {static} + SELECT_ID_USER : String
+        {static} + SELECT_ID_PAYMENT : String
+        {static} + SELECT_ID_PERIODICAL : String
+        {static} + SELECT_ID_ARTICLE : String
+        {static} + SELECT_IDPERIODICAL_ARTICLE : String
+        {static} + SELECT_LOGIN_USER : String
+        {static} + SELECT_USER_PAYMENT : String
+        {static} + SELECT_USER_PERIODICAL : String
+        {static} + SELECT_PERIODICAL_PAYMENT : String
+        {static} + SELECT_PERIODICAL_USER : String
+        {static} + SELECT_PAYMENT_PERIODICAL : String
+        {static} + UPDATE_USER_MONEY : String
+        {static} + UPDATE_USER_MONEY_BUY : String
+        {static} + SELECT_PERIODICALS_LIMIT : String
+        {static} + SELECT_ARTICLES_LIMIT_BY_ID : String
+        {static} + SEARCH_PERIODICAL : String
+        {static} - getMessage()
+    }
+  }
+  
+
+  package ua.training.util.constant {
+    interface TableColumns {
+        {static} + USER_ID : String
+        {static} + USER_NAME : String
+        {static} + USER_SURNAME : String
+        {static} + USER_LOGIN : String
+        {static} + USER_PASSWORD : String
+        {static} + USER_ROLE : String
+        {static} + USER_PHONE : String
+        {static} + USER_MONEY : String
+        {static} + PERIODICAL_ID : String
+        {static} + PERIODICAL_NAME : String
+        {static} + PERIODICAL_PRICE : String
+        {static} + PERIODICAL_DESCRIPTION : String
+        {static} + ARTICLE_ID : String
+        {static} + ARTICLE_NAME : String
+        {static} + ARTICLE_DATE : String
+        {static} + ARTICLE_PERIODICAL : String
+        {static} + ARTICLE_TEXT : String
+        {static} + PAYMENT_ID : String
+        {static} + PAYMENT_PRICE : String
+        {static} + PAYMENT_USER : String
+    }
+  }
+  
+
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml
